@@ -83,17 +83,32 @@ ul {
 
 li {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   background: white;
   border: 1px solid #e2e8f0;
   padding: 12px 16px;
   margin-bottom: 10px;
   border-radius: 8px;
-  font-size: 0.95rem;
+  gap: 12px;
 }
 
 li:before {
   content: "📄";
-  margin-right: 10px;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+li a {
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #4f46e5;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+li a:hover {
+  text-decoration: underline;
 }
